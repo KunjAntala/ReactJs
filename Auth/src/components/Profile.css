@@ -1,0 +1,19 @@
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.auth{
+    border: 1px solid black;
+    padding: 4rem;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+

@@ -1,0 +1,51 @@
+.app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.login{
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.user-email{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.user-pass{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+#email,#password{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 20rem;
+}
+
+.actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.actions button{
+    margin: 0.5rem;
+    padding : 0.5rem 1.5rem;
+    font-size: medium;
+    background-color: #044599;
+    border: 1px solid #044599;
+    border-radius: 5px;
+    color: white;
+    width: 10rem;
+}
