@@ -8,7 +8,11 @@
 
 .auth{
     border: 1px solid black;
-    padding: 4rem;
+    padding: 3rem;
+}
+
+.auth h2{
+    padding-bottom: 1rem;
 }
 
 .input-group{
@@ -17,3 +21,17 @@
     margin-bottom: 1rem;
 }
 
+.input-group input{
+    width: 20rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.change-pass button{
+    background-color: #044599;
+    border: 1px solid #044599;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: medium;
+}

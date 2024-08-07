@@ -2,12 +2,14 @@ import React, { useContext, useRef } from 'react'
 import { useState } from 'react'
 import './Auth.css'
 import AuthContext from './store/auth-store'
-
+import { useNavigate } from "react-router-dom";
+ 
 function Auth() {
   const authContext = useContext(AuthContext)
   const [loginToggle, setLoginToggle] = useState(true)
   const emailRef = useRef('')
   const passwordRef = useRef('')
+  const navigate = useNavigate()
   
   const toggleHandler = () => {
     setLoginToggle((prevState) => !prevState)
@@ -46,8 +48,11 @@ function Auth() {
           }
         })
         .then((data) => {
-          authContext.login(data.idToken)
-          console.log('Sign Up Successfully',data)})
+          if(loginToggle){
+          authContext.Login(data.idToken)}
+          console.log('Sign Up Successfully',data)
+          navigate('/profile')
+        })
         .catch((error) => {alert(error)})
   }
 
