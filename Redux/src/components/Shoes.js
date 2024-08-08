@@ -1,48 +1,25 @@
 import React from 'react'
 import './Shoes.css'
-// import shoes1 from '../src/assets/s1.png'
+import { useDispatch } from 'react-redux'
+import { addtoCart } from '../redux/cartSlice'
 
-function Shoes() {
+function Shoes(props) {
+    
+    const dispatch = useDispatch()
 
   return (
     <div className="shoes">
         <div className="item">
             <div className='image'>
-                {/* <img src={shoes1} width="100" height="50"/> */}
+                <img src={props.image}></img>
             </div>
             <div className="hero">
-                <span className="description">Sustainable Material</span>
-                <span className="sname">Nike Pegasus 41</span>
-                <p className="scolor">Men's Road Runnig Shoes</p>
-                <span className="scolor">1 Colour</span>
-                <span className="price">MRP : ₹ 11 895.00</span>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-        <div className="item">
-            <div className='image'>
-                {/* <img src="/WebSite/assets/s2.png" alt=""> */}
-            </div>
-            <div className="hero">
-                <span className="description">Sustainable Material</span>
-                <span className="sname">Nike Pegasus 41</span>
-                <p className="scolor">Women's Road Runnig Shoes</p>
-                <span className="scolor">1 Colour</span>
-                <span className="price">MRP : ₹ 11 895.00</span>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-        <div className="item">
-            <div className='image'>
-                {/* <img src="/WebSite/assets/s3.png" alt=""> */}
-            </div>
-            <div className="hero">
-                <span className="description">Sustainable Material</span>
-                <span className="sname">Nike Pegasus 41</span>
-                <p className="scolor">Women's Road Runnig Shoes</p>
-                <span className="scolor">1 Colour</span>
-                <span className="price">MRP : ₹ 11 895.00</span>
-                <button>Add to Cart</button>
+                <span className="description">{props.description}</span>
+                <span className="sname">{props.sname}</span>
+                <p className="scolor">{props.scategory}</p>
+                <span className="scolor">{props.scolor}</span>
+                <span className="price">{props.price}</span>
+                <button onClick={() => dispatch(addtoCart())}>{props.button}</button>
             </div>
         </div>
     </div>

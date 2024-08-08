@@ -1,11 +1,6 @@
-.shoes{
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .item{
     margin: 0.5rem;
+    width: 300px;
 }
 
 .hero{
@@ -40,4 +35,8 @@
     color: white;
     margin-top: 1rem;
     padding: 0.5rem;
+}
+
+.image img{
+    width: 300px;
 }
