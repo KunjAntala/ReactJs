@@ -3,7 +3,7 @@ import './Shoes.css'
 import { useDispatch } from 'react-redux'
 import { addtoCart } from '../redux/cartSlice'
 
-function Shoes(props) {
+function Shoes({id, image, description, sname, scategory, scolor, price }) {
     
     const dispatch = useDispatch()
 
@@ -11,15 +11,18 @@ function Shoes(props) {
     <div className="shoes">
         <div className="item">
             <div className='image'>
-                <img src={props.image}></img>
+                <img src={image}></img>
             </div>
             <div className="hero">
-                <span className="description">{props.description}</span>
-                <span className="sname">{props.sname}</span>
-                <p className="scolor">{props.scategory}</p>
-                <span className="scolor">{props.scolor}</span>
-                <span className="price">{props.price}</span>
-                <button onClick={() => dispatch(addtoCart())}>{props.button}</button>
+                <span className="description">{description}</span>
+                <span className="sname">{sname}</span>
+                <p className="scolor">{scategory}</p>
+                <span className="scolor">{scolor}</span>
+                <span className="price">{price}</span>
+                <button onClick={() => dispatch(
+                    addtoCart({id, image, description, sname, scategory, scolor, price })
+                    )}>Add to Cart
+                </button>
             </div>
         </div>
     </div>

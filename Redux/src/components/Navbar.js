@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import cart from '../assets/shopping-bag.png'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
   const cartItems = useSelector(state => state.cart.cart)
@@ -17,14 +18,14 @@ export const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <p className="nav-link active" aria-current="page">Home</p>
+                <Link className="nav-link active" aria-current="page" to='/'>Home</Link>
               </li>
               <li className="nav-item">
-                <p className="nav-link">About</p>
+                <Link className="nav-link" to='/about'>About</Link>
               </li>
             </ul>
             <div className='cart'>
-              <img src={cart} height='30px' width='30px'></img>
+              <Link to='/cart'><img src={cart} height='30px' width='30px'/></Link>
               <p>{cartItems.length}</p>
             </div>
           </div>

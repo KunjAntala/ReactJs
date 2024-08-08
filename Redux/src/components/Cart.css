@@ -1,0 +1,47 @@
+.ct-hero{
+    display: flex;
+   flex-direction: row;
+}
+
+.ct-item{
+    margin: 0.5rem;
+    width: 300px;
+}
+
+.ct-hero{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.ct-description{
+    color: #9e3500;
+    font-weight: 600;
+}
+
+.ct-sname{
+    color: black;
+    font-weight: 600;
+}
+
+.ct-scolor{
+    color: #707072;
+}
+
+.ct-price{
+    color: black;
+    font-weight: bold;
+}
+
+.ct-hero button{
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.ct-image img{
+    width: 300px;
+}
