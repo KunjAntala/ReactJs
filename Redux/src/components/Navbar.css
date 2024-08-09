@@ -16,3 +16,8 @@
     font-size: smaller;
     font-weight: bold;
 }
+
+.nav-link:hover{
+ color: black;
+ font-weight: 500;
+}

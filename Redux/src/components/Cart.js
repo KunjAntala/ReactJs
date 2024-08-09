@@ -7,7 +7,7 @@ function Cart() {
     const cartItems = useSelector(state => state.cart.cart)
     const dispatch = useDispatch()
     return (
-        <div className='ct-hero'>
+        <div className='container'>
             {
                 cartItems.map(item => {
                     return (

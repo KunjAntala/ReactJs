@@ -1,0 +1,21 @@
+.ct{
+    display: flex;
+    justify-content: center;
+}
+
+.signin{
+    width: 37%;
+    margin-top: 2rem;
+}
+
+.logo{
+    width: 45px;
+    display: flex;
+    flex-direction: row;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.75rem;
+}
